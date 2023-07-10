@@ -13,7 +13,7 @@ import { HomeComponent } from './app/home/home.component';
 import { RegisterComponent } from './app/account/register.component';
 import { LoginComponent } from './app/account/login.component';
 import { fakeBackendProvider } from './app/_helpers';
-import { StarshipComponent } from './app/starship/starship/starship.component';
+import { StarshipComponent } from './app/starship/starships/starships.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -26,7 +26,7 @@ import { StarshipComponent } from './app/starship/starship/starship.component';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    
+
     StarshipComponent,
   ],
   providers: [
