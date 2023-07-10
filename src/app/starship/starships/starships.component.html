@@ -1,6 +1,7 @@
 <h2>Listado de Naves</h2>
 <ul>
-  <li *ngFor="let starship of starships$ | async">
+  <li *ngFor="let starship of starships.results">
     {{ starship.name }}
+    {{ starship.model }}
   </li>
 </ul>
