@@ -1,7 +1,9 @@
-<h2>Listado de Naves</h2>
-<ul>
-  <li *ngFor="let starship of starships.results">
-    {{ starship.name }}
-    {{ starship.model }}
-  </li>
-</ul>
+<div class="starships-container">
+  <h2>Starship Lists</h2>
+  <ul *ngFor="let starship of starships.results">
+    <li class="list-group-item">
+      <b>{{ starship.name }}</b>
+    </li>
+    <li class="list-group-item">{{ starship.model }}</li>
+  </ul>
+</div>

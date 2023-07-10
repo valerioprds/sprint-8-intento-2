@@ -1,0 +1,9 @@
+.starships-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #0a0b0b;
+  color: #aaaaaa;
+}
