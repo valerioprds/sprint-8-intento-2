@@ -13,6 +13,8 @@ import { HomeComponent } from './app/home/home.component';
 import { RegisterComponent } from './app/account/register.component';
 import { LoginComponent } from './app/account/login.component';
 import { fakeBackendProvider } from './app/_helpers';
+import { SharshipComponent } from './app/starship/sharship/sharship.component';
+import { StarshipComponent } from './app/starship/starship/starship.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -25,6 +27,8 @@ import { fakeBackendProvider } from './app/_helpers';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
+    SharshipComponent,
+    StarshipComponent,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
