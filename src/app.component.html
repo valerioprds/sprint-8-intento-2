@@ -1,12 +1,51 @@
-<!-- nav -->
-<nav class="navbar navbar-expand navbar-dark bg-dark px-3" *ngIf="user">
-  <div class="navbar-nav">
-    <a class="nav-item nav-link" routerLink="/">Home</a>
-    <button class="btn btn-link nav-item nav-link" (click)="logout()">
-      Logout
-    </button>
-  </div>
-</nav>
+
+
+<div class="container header-container">
+  <header
+    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+  >
+    <div class="col-md-3 mb-2 mb-md-0">
+      <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+        <svg
+          class="bi"
+          width="40"
+          height="32"
+          role="img"
+          aria-label="Bootstrap"
+        >
+          <use xlink:href="#bootstrap" />
+        </svg>
+      </a>
+    </div>
+
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li><a class="nav-item nav-link a-color" routerLink="/">Home</a></li>
+      <li>
+        <a class="nav-item nav-link a-color" routerLink="/starships">Starships</a>
+      </li>
+    </ul>
+
+    <div class="col-md-3 text-end" *ngIf="user">
+      <button
+        type="button"
+        class="btn  me-2 a-color"
+        routerLink="/account/login"
+      >
+        Login
+      </button>
+      <button
+        type="button"
+        class="btn  a-color"
+        routerLink="/account/register"
+      >
+        Sign-up
+      </button>
+      <button type="button" class="btn mx-2 a-color" (click)="logout()">
+        Logout
+      </button>
+    </div>
+  </header>
+</div>
 
 <!-- main app container -->
 <div class="container">

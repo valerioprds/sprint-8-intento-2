@@ -14,6 +14,7 @@ import { RegisterComponent } from './app/account/register.component';
 import { LoginComponent } from './app/account/login.component';
 import { fakeBackendProvider } from './app/_helpers';
 import { StarshipComponent } from './app/starship/starships/starships.component';
+import { FichaComponent } from './app/ficha/ficha.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -28,6 +29,7 @@ import { StarshipComponent } from './app/starship/starships/starships.component'
     RegisterComponent,
 
     StarshipComponent,
+      FichaComponent,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
