@@ -1,1 +1,5 @@
-<p>ficha works!</p>
+<div class="container-fluid" *ngFor="let starship of starships.results">
+  <li class="list-group-item">
+    <b>{{ starships.results.name }}</b>
+  </li>
+</div>
