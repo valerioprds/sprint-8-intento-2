@@ -1,5 +1,5 @@
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Component, OnInit , } from '@angular/core';
+import { Component, Input, OnInit , } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -14,7 +14,7 @@ import { StarshipService } from 'src/app/_services/starships.service';
 export class FichaComponent implements OnInit {
   constructor(public modal: NgbModal) {}
 
-
+  @Input() starships: any
   open(content: any) {
     this.modal.open(content);
   }

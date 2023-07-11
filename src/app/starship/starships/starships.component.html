@@ -1,11 +1,13 @@
 <div>
   <div class="starships-container">
-    <ul class="list-group m-3" *ngFor="let starship of starships.results">
+    <ul class="list-group m-3" *ngFor="let starship of starships">
       <li class="list-group-item">
         <b> {{ starship.name }} </b>
       </li>
       <li class="list-group-item">{{ starship.model }}</li>
-      <li class="list-group-item"><app-ficha></app-ficha></li>
+      <li class="list-group-item">
+        <app-ficha [starships]="starships"></app-ficha>
+      </li>
     </ul>
   </div>
 </div>
