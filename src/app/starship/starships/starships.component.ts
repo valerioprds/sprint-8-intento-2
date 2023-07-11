@@ -19,16 +19,10 @@ export class StarshipComponent implements OnInit {
   @ViewChild(FichaComponent) fichaComponent!: FichaComponent;
 
 
-  starships: any;
+  starships: any = {};
   constructor(public starshipService: StarshipService , public modal: NgbModal) {}
 
-  open(content: any) {
-    this.modal.open(content);
-  }
 
-  openBackground(content: any) {
-    this.modal.open(content, { backdropClass: 'background-modal' });
-  }
 
   ngOnInit(): void {
     this.starshipService.getStarships().subscribe((data) => {
@@ -36,6 +30,14 @@ export class StarshipComponent implements OnInit {
       console.log(data);
       console.log(this.starships);
     });
+  }
+
+  open(content: any) {
+    this.modal.open(content);
+  }
+
+  openBackground(content: any) {
+    this.modal.open(content, { backdropClass: 'background-modal' });
   }
 
 }
