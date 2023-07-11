@@ -1,9 +1,12 @@
-<div class="starships-container">
-  <!-- <h1 class="text-center">Starship Lists</h1> -->
+<div class="starships-container" >
   <ul *ngFor="let starship of starships.results">
     <li class="list-group-item">
       <b>{{ starship.name }}</b>
-    </li>
+    </li> <app-ficha ></app-ficha>
     <li class="list-group-item">{{ starship.model }}</li>
+    <li class="list-group-item">
+      <!-- <button class="btn btn-primary" (click)="fichaComponent.open(content)">Ver Ficha</button> -->
+    </li>
   </ul>
+
 </div>

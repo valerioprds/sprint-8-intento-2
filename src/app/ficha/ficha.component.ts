@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit , } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -11,13 +12,17 @@ import { StarshipService } from 'src/app/_services/starships.service';
   styleUrls: ['./ficha.component.css'],
 })
 export class FichaComponent implements OnInit {
-  starships: any;
-  constructor(public starshipService: StarshipService) {}
-  ngOnInit(): void {
-    this.starshipService.getStarships().subscribe((data) => {
-      this.starships = data;
-      console.log(data);
-      console.log(this.starships);
-    });
+  constructor(public modal: NgbModal) {}
+
+
+  open(content: any) {
+    this.modal.open(content);
   }
+
+
+  openBackground(contenido: any) {
+    this.modal.open(contenido, { backdropClass: 'background-modal' });
+  }
+
+  ngOnInit(): void {}
 }
