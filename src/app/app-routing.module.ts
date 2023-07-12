@@ -12,7 +12,9 @@ const routes: Routes = [
     { path: 'account/login', component: LoginComponent },
     { path: 'account/register', component: RegisterComponent },
     { path: 'starships', component: StarshipComponent },
+
     { path: 'ficha', component: FichaComponent },
+    { path: 'ficha/:id', component: FichaComponent },
 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
@@ -23,3 +25,8 @@ const routes: Routes = [
     exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+
+
+

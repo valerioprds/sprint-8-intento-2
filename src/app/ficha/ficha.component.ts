@@ -1,10 +1,10 @@
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Component, Input, OnInit } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { StarshipService } from 'src/app/_services/starships.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-ficha',
@@ -12,16 +12,11 @@ import { StarshipService } from 'src/app/_services/starships.service';
   styleUrls: ['./ficha.component.css'],
 })
 export class FichaComponent implements OnInit {
-  constructor(public modal: NgbModal) {}
 
-  @Input() starships: any;
-  open(content: any) {
-    this.modal.open(content);
-  }
 
-  openBackground(contenido: any) {
-    this.modal.open(contenido, { backdropClass: 'background-modal' });
-  }
-
+ //@Input() starships: any;
+  /* constructor(private route: ActivatedRoute) {
+    this.route.params.subscribe((params) => console.log(params));
+  } */
   ngOnInit(): void {}
 }
