@@ -26,18 +26,12 @@ export class StarshipComponent implements OnInit {
 
   ngOnInit(): void {
     this.starshipService.getStarships().subscribe((data) => {
-      this.starships = data.results;
+      this.starships = data;
       console.log(data);
       console.log(this.starships);
     });
   }
 
-  open(content: any) {
-    this.modal.open(content);
-  }
 
-  openBackground(content: any) {
-    this.modal.open(content, { backdropClass: 'background-modal' });
-  }
 
 }
