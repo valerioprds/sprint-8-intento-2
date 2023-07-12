@@ -1,12 +1,17 @@
 <div>
   <div class="starships-container">
-    <ul class="list-group m-3" *ngFor="let starship of starships.results">
+    <ul class="list-group m-3" *ngFor="let starship of starships">
       <li class="list-group-item">
         <b> {{ starship.name }} </b>
       </li>
       <li class="list-group-item">{{ starship.model }}</li>
       <li class="list-group-item">
-        <app-ficha [starships]="starships"></app-ficha>
+        <!-- <app-ficha ></app-ficha> -->
+
+        <button type="button" class="btn btn-primary" routerLink="/ficha">
+          Ver Ficha
+        </button>
+        <router-outlet></router-outlet>
       </li>
     </ul>
   </div>

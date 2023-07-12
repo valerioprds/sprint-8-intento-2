@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 
 import { StarshipService } from 'src/app/_services/starships.service';
 import { FichaComponent } from 'src/app/ficha/ficha.component';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -20,18 +20,22 @@ export class StarshipComponent implements OnInit {
 
 
   starships: any = {};
-  constructor(public starshipService: StarshipService , public modal: NgbModal) {}
+  constructor(private starshipService: StarshipService , private router: Router) {}
 
 
 
   ngOnInit(): void {
     this.starshipService.getStarships().subscribe((data) => {
-      this.starships = data;
+      this.starships = data.results;
       console.log(data);
       console.log(this.starships);
     });
   }
 
+
+  showDetails() {
+    this.router.navigate(['ficha', 'section1'])
+  }
 
 
 }
