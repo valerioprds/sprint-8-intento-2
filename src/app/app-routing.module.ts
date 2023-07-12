@@ -14,7 +14,7 @@ const routes: Routes = [
     { path: 'starships', component: StarshipComponent },
 
     { path: 'ficha', component: FichaComponent },
-    { path: 'ficha/:id', component: FichaComponent },
+    { path: 'ficha/:name', component: FichaComponent },
 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
