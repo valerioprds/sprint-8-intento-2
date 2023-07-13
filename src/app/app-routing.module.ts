@@ -13,8 +13,7 @@ const routes: Routes = [
     { path: 'account/register', component: RegisterComponent },
     { path: 'starships', component: StarshipComponent },
 
-    { path: 'ficha', component: FichaComponent },
-    { path: 'ficha/:name', component: FichaComponent },
+    { path: 'starships/:id', component: FichaComponent },
 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }

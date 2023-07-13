@@ -18,11 +18,11 @@ export class FichaComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe((params) => {
-      const starShipname = params.get("name")!; // Suponiendo que el parámetro en la ruta se llame 'id'
+      const starshipId  = params.get('id')!;
 
       // Llamar al servicio para obtener los detalles de la nave por su ID
       this.starshipService
-        .getStarshipsDetails(starShipname)
+        .getStarshipsDetails(starshipId)
         .subscribe((starship) => {
           this.starship = starship;
         });

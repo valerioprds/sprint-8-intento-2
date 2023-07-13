@@ -11,9 +11,9 @@ export class StarshipService {
 
   private apiUrl = 'https://swapi.dev/api/starships';
 
-  getStarshipsDetails(name: string): Observable<any> {
-    const path = `https://swapi.dev/api/starships/${name}`;
-    console.log(name)
+  getStarshipsDetails(id: string): Observable<any> {
+    const path = `https://swapi.dev/api/starships/${id}`;
+    console.log(id)
 
     return this.http.get<any>(path);
   }

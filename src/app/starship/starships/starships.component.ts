@@ -26,10 +26,13 @@ export class StarshipComponent implements OnInit {
       this.starships = data.results;
       console.log(data);
       console.log(this.starships);
+
+      let newStarshipsArray = this.starships.map((object: any, index: any) => {
+        return { ...object, id: index + 1 };
+      });
+
+      console.log(newStarshipsArray);
     });
   }
+
 }
-
-
-
-
