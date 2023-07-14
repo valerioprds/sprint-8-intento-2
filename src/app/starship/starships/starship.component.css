@@ -14,3 +14,10 @@ ul li {
   border: none;
 }
 
+.hover-effect:hover {
+  padding: 5px;
+  border: 2px solid #ffc107;
+ 
+  border-radius: 25px 25px 25px 25px;
+}
+/* #ffc107 */

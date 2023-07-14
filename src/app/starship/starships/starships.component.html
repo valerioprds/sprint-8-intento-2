@@ -1,19 +1,12 @@
 <div>
   <div class="starships-container">
     <ul class="list-group m-3" *ngFor="let starship of starships">
-      <li class="list-group-item">
-        <b>{{ starship.name }}</b>
-      </li>
+      <a class="text-decoration-none hover-effect" [routerLink]="['/starships', starship.id  ]">
+        <h3 class="text-warning"><b>{{ starship.name }}</b></h3>
+      </a>
       <li class="list-group-item">{{ starship.model }}</li>
       <li class="list-group-item">
-        <a
-          class="btn btn-primary"
-          [routerLink]="['/starships', starship.id ]"
-        >
-          <!-- ! preguntar a isma  -->
 
-          Ver Ficha
-        </a>
         <router-outlet></router-outlet>
       </li>
     </ul>
