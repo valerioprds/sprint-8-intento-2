@@ -17,7 +17,14 @@ ul li {
 .hover-effect:hover {
   padding: 5px;
   border: 2px solid #ffc107;
- 
   border-radius: 25px 25px 25px 25px;
 }
-/* #ffc107 */
+
+.starship-div {
+  background-color: #151515;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
