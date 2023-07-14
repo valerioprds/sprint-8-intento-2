@@ -6,10 +6,14 @@
       </li>
       <li class="list-group-item">{{ starship.model }}</li>
       <li class="list-group-item">
-        <a class="btn btn-primary" [routerLink]="['/starships', starship.id]" >
+        <a
+          class="btn btn-primary"
+          [routerLink]="['/starships', starship.id ]"
+        >
+          <!-- ! preguntar a isma  -->
+
           Ver Ficha
         </a>
-
         <router-outlet></router-outlet>
       </li>
     </ul>

@@ -18,7 +18,7 @@ export class FichaComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe((params) => {
-      const starshipId  = params.get('id')!;
+      const starshipId = params.get('id')!;
 
       // Llamar al servicio para obtener los detalles de la nave por su ID
       this.starshipService

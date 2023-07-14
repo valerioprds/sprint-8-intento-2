@@ -13,7 +13,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./starship.component.css'],
 })
 export class StarshipComponent implements OnInit {
-  @ViewChild(FichaComponent) fichaComponent!: FichaComponent;
+  // @ViewChild(FichaComponent) fichaComponent!: FichaComponent;
+
+  //! parece que no sirve el viewchild
 
   starships: any = {};
   constructor(
@@ -23,16 +25,15 @@ export class StarshipComponent implements OnInit {
 
   ngOnInit(): void {
     this.starshipService.getStarships().subscribe((data) => {
-      this.starships = data.results;
       console.log(data);
-      console.log(this.starships);
-
-      let newStarshipsArray = this.starships.map((object: any, index: any) => {
+      this.starships = data.results.map((object: any, index: any) => {
         return { ...object, id: index + 1 };
       });
 
-      console.log(newStarshipsArray);
+      console.log(this.starships);
     });
   }
+
+
 
 }

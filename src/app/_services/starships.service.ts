@@ -12,18 +12,13 @@ export class StarshipService {
   private apiUrl = 'https://swapi.dev/api/starships';
 
   getStarshipsDetails(id: string): Observable<any> {
-    const path = `https://swapi.dev/api/starships/${id}`;
-    console.log(id)
+    const path = `https://swapi.dev/api/starships/${id}/`;
+    console.log(id);
 
     return this.http.get<any>(path);
   }
 
 
-  /*
-  getTask(id: string) {
-    const path = `${this.api}/todos/${id}`
-    return this.http.get<Task>(path)
-  } */
 
   getStarships(): Observable<any> {
     return this.http.get(this.apiUrl);
