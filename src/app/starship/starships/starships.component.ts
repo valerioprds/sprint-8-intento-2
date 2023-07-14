@@ -26,14 +26,11 @@ export class StarshipComponent implements OnInit {
   ngOnInit(): void {
     this.starshipService.getStarships().subscribe((data) => {
       console.log(data);
-      this.starships = data.results.map((object: any, index: any) => {
-        return { ...object, id: index + 1 };
+      this.starships = data.results.map((object: any) => {
+        object.id = object.url!.match(/[1-9]?\d|100/)![0];
+        return object;
       });
-
       console.log(this.starships);
     });
   }
-
-
-
 }
