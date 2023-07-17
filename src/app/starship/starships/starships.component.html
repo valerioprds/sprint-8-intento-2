@@ -1,8 +1,8 @@
-<div>
+ <div>
   <div class="starships-container">
     <ul class="list-group m-3" *ngFor="let starship of starships">
       <div  class="starship-div"><a
-        class="text-decoration-none hover-effect"
+        class="text-decoration-none "
         [routerLink]="['/starships', starship.id]"
       >
         <h3 class="text-warning">
@@ -16,3 +16,7 @@
     </ul>
   </div>
 </div>
+
+
+
+
