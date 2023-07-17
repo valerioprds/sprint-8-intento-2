@@ -15,12 +15,14 @@ import { LoginComponent } from './app/account/login.component';
 import { fakeBackendProvider } from './app/_helpers';
 import { StarshipComponent } from './app/starship/starships/starships.component';
 import { FichaComponent } from './app/ficha/ficha.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    NgxPaginationModule
   ],
   declarations: [
     AppComponent,

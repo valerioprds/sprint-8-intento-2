@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { map, filter } from 'rxjs/operators';
 
 
@@ -8,10 +8,12 @@ import { map, filter } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class StarshipService {
-  constructor(private http: HttpClient) {}
+  private nextPage = 1
   private imageURL = ' https://starwars-visualguide.com/assets/img/starships/';
 
   private apiUrl = 'https://swapi.dev/api/starships';
+  constructor(private http: HttpClient) {}
+
 
   getStarshipsDetails(id: string): Observable<any> {
     const path = `https://swapi.dev/api/starships/${id}/`;
@@ -29,6 +31,9 @@ export class StarshipService {
     return this.http.get(this.apiUrl);
   }
 
-
- 
+  getMoreStarships(): Observable<any> {
+    const url = `${this.apiUrl}/?page=${this.nextPage}`;
+    this.nextPage++;
+    return this.http.get<any>(url);
+  }
 }

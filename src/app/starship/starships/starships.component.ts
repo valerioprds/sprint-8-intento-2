@@ -13,11 +13,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./starship.component.css'],
 })
 export class StarshipComponent implements OnInit {
-  // @ViewChild(FichaComponent) fichaComponent!: FichaComponent;
+  @ViewChild(FichaComponent) fichaComponent!: FichaComponent;
 
-  //! parece que no sirve el viewchild
-
-  starships: any = {};
+  starships: any[] = [];
+  page!: number;
   constructor(
     private starshipService: StarshipService,
     private router: Router
@@ -32,5 +31,20 @@ export class StarshipComponent implements OnInit {
       });
       console.log(this.starships);
     });
+    // this.getMoreShips()
   }
+
+  getMoreShips() {
+    console.log('hello from  getMoreShips');
+    this.starshipService.getMoreStarships().subscribe(
+      (response) => {
+        this.starships = this.starships.concat(response.results);
+      },
+      (error) => {
+        console.error('Error when loading the ships:', error);
+      }
+    );
+  }
+
+ 
 }
