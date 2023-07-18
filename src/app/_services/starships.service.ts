@@ -8,7 +8,7 @@ import { map, filter } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class StarshipService {
-  private nextPage = 1
+  private nextPage = 2
   private imageURL = ' https://starwars-visualguide.com/assets/img/starships/';
 
   private apiUrl = 'https://swapi.dev/api/starships';
@@ -33,6 +33,7 @@ export class StarshipService {
 
   getMoreStarships(): Observable<any> {
     const url = `${this.apiUrl}/?page=${this.nextPage}`;
+    console.log(url)
     this.nextPage++;
     return this.http.get<any>(url);
   }

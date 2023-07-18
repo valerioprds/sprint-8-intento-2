@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { StarshipService } from 'src/app/_services/starships.service';
-import { FichaComponent } from 'src/app/ficha/ficha.component';
+//import { FichaComponent } from 'src/app/ficha/ficha.component';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,8 +13,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./starship.component.css'],
 })
 export class StarshipComponent implements OnInit {
-  @ViewChild(FichaComponent) fichaComponent!: FichaComponent;
-
+  // @ViewChild(FichaComponent) fichaComponent!: FichaComponent;
+  starshipsNew : any [] = []
   starships: any[] = [];
   page!: number;
   constructor(
@@ -23,6 +23,7 @@ export class StarshipComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    console.log('hello from  ngOnInit');
     this.starshipService.getStarships().subscribe((data) => {
       console.log(data);
       this.starships = data.results.map((object: any) => {
@@ -31,20 +32,31 @@ export class StarshipComponent implements OnInit {
       });
       console.log(this.starships);
     });
-    // this.getMoreShips()
+    //this.getMoreShips();
   }
 
   getMoreShips() {
+    console.log(this.starships);
     console.log('hello from  getMoreShips');
     this.starshipService.getMoreStarships().subscribe(
-      (response) => {
-        this.starships = this.starships.concat(response.results);
+      (resp) => {
+
+        this.starshipsNew = resp.results.map((object: any) => {
+          object.id = object.url!.match(/[1-9]?\d|100/)![0];
+          return object;
+        });
+
+        this.starships = this.starships.concat(this.starshipsNew);
+
+        /*  concatenar starshipsNew con starship  */
+
+        console.log(resp);
+
+
       },
       (error) => {
         console.error('Error when loading the ships:', error);
       }
     );
   }
-
- 
 }
