@@ -10,8 +10,8 @@ import { FichaComponent } from './ficha/ficha.component';
 const routes: Routes = [
     { path: '', component: HomeComponent , canActivate: [AuthGuard] },
     { path: 'account/login', component: LoginComponent },
-    { path: 'account/register', component: RegisterComponent },
-    { path: 'starships', component: StarshipComponent },
+    { path: 'account/register', component: RegisterComponent , canActivate: [AuthGuard] },
+    { path: 'starships', component: StarshipComponent, canActivate: [AuthGuard] },
 
     { path: 'starships/:id', component: FichaComponent },
 

@@ -24,9 +24,15 @@
     </div>
 
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a class="nav-item nav-link nav-links" routerLink="/">Home</a></li>
       <li>
-        <a class="nav-item nav-link nav-links" routerLink="/starships"
+        <a class="text-warning nav-item nav-link nav-links" routerLink="/"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          class="text-warning nav-item nav-link nav-links"
+          routerLink="/starships"
           >Starships</a
         >
       </li>
@@ -38,6 +44,7 @@
         class="btn me-2 account-buttons text-warning"
         routerLink="/account/login"
       >
+        <i class="fa-solid fa-right-to-bracket"></i>
         Login
       </button>
       <button
@@ -45,6 +52,7 @@
         class="text-warning btn account-buttons"
         routerLink="/account/register"
       >
+        <i class="fa-solid fa-user-plus"></i>
         Sign-up
       </button>
       <button
@@ -52,14 +60,15 @@
         class="text-warning btn mx-2 account-buttons"
         (click)="logout()"
       >
+        <i class="fa-solid fa-right-from-bracket"></i>
         Logout
       </button>
+      
     </div>
   </header>
 </div>
 
 <!-- main app container -->
-<div class="container" >
+<div class="container">
   <router-outlet></router-outlet>
 </div>
-
