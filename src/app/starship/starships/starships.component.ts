@@ -13,7 +13,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./starship.component.css'],
 })
 export class StarshipComponent implements OnInit {
-  // @ViewChild(FichaComponent) fichaComponent!: FichaComponent;
   starshipsNew : any [] = []
   starships: any[] = [];
   page!: number;
@@ -23,40 +22,37 @@ export class StarshipComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    console.log('hello from  ngOnInit');
-    this.starshipService.getStarships().subscribe((data) => {
-      console.log(data);
-      this.starships = data.results.map((object: any) => {
-        object.id = object.url!.match(/[1-9]?\d|100/)![0];
-        return object;
-      });
-      console.log(this.starships);
-    });
-    //this.getMoreShips();
-  }
-
-  getMoreShips() {
-    console.log(this.starships);
-    console.log('hello from  getMoreShips');
-    this.starshipService.getMoreStarships().subscribe(
-      (resp) => {
-
-        this.starshipsNew = resp.results.map((object: any) => {
-          object.id = object.url!.match(/[1-9]?\d|100/)![0];
-          return object;
-        });
-
-        this.starships = this.starships.concat(this.starshipsNew);
-
-        /*  concatenar starshipsNew con starship  */
-
-        console.log(resp);
-
-
+    console.log('hello from ngOnInit');
+    this.starshipService.getStarships().subscribe(
+      (data) => {
+        console.log(data);
+        this.processStarships(data.results);
       },
       (error) => {
         console.error('Error when loading the ships:', error);
       }
     );
+  }
+
+  getMoreShips() {
+    console.log('hello from getMoreShips');
+    this.starshipService.getMoreStarships().subscribe(
+      (resp) => {
+        console.log(resp);
+        this.processStarships(resp.results);
+      },
+      (error) => {
+        console.error('Error when loading more ships:', error);
+      }
+    );
+  }
+
+  private processStarships(results: any[]): void {
+    const processedResults = results.map((object: any) => {
+      object.id = object.url!.match(/[1-9]?\d|100/)![0];
+      return object;
+    });
+    this.starships = this.starships.concat(processedResults);
+    console.log(this.starships);
   }
 }
