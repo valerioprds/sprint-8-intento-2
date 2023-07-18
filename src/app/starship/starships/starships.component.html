@@ -1,33 +1,21 @@
 <div>
   <div class="starships-container">
-    <ul class="list-group m-3" *ngFor="let starship of starships">
-      <div class="starship-div">
-        <a
-          class="text-decoration-none"
-          [routerLink]="['/starships', starship.id]"
-        >
-          <h3 class="text-warning">
-            <b>{{ starship.name }}</b>
-          </h3>
-        </a>
-      </div>
-      <li class="list-group-item">{{ starship.model }}</li>
-      <li class="list-group-item">
-
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let starship of starships">
+        <div class="starship-div">
+          <a class="text-decoration-none" [routerLink]="['/starships', starship.id]">
+            <h3 class="text-warning">
+              <b>{{ starship.name }}</b>
+            </h3>
+          </a>
+          <div class="list-group-item starship-model">{{ starship.model }}</div>
+        </div>
       </li>
     </ul>
+
   </div>
 
-  <!--   <div class="d-flex justify-content-center align-items-center mb-5">
-    <pagination-controls
-      class="text-warning"
-      (pageChange)="page = $event"
-      previousLabel="Anterior"
-      nextLabel="Siguiente"
-    ></pagination-controls>
-  </div> -->
-
-  <div class="d-flex justify-content-center align-items-center mb-5">
+  <div class="d-flex justify-content-center align-items-center m-3">
     <button class="btn btn-warning btn-lg" (click)="getMoreShips()">
       View More
     </button>

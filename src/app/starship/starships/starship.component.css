@@ -22,5 +22,11 @@ ul li {
   padding-bottom: 17px;
   padding-left: 10px;
   padding-right: 10px;
-  width: 100%;
+
+}
+
+.starship-model {   background-color: #151515;
+  color: #aaaaaa;
+  border: none;
+
 }

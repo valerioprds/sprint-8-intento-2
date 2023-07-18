@@ -1,10 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 
 import { StarshipService } from 'src/app/_services/starships.service';
-//import { FichaComponent } from 'src/app/ficha/ficha.component';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./starship.component.css'],
 })
 export class StarshipComponent implements OnInit {
-  starshipsNew : any [] = []
+  starshipsNew: any[] = [];
   starships: any[] = [];
   page!: number;
   constructor(

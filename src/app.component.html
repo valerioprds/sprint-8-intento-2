@@ -1,8 +1,10 @@
 <div class="container header-container">
-  <div class="container d-flex align-items-center justify-content-center"><img
-    src="/assets/Captura de pantalla 2023-07-11 101021.png"
-    alt="starwars-logo"
-  /></div>
+  <div class="container d-flex align-items-center justify-content-center">
+    <img
+      src="/assets/Captura de pantalla 2023-07-11 101021.png"
+      alt="starwars-logo"
+    />
+  </div>
 
   <header
     class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
@@ -22,9 +24,9 @@
     </div>
 
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a class="nav-item nav-link navbar-links" routerLink="/">Home</a></li>
+      <li><a class="nav-item nav-link nav-links" routerLink="/">Home</a></li>
       <li>
-        <a class="nav-item nav-link navbar-links" routerLink="/starships"
+        <a class="nav-item nav-link nav-links" routerLink="/starships"
           >Starships</a
         >
       </li>
@@ -33,15 +35,23 @@
     <div class="col-md-3 text-end" *ngIf="user">
       <button
         type="button"
-        class="btn me-2 account-buttons"
+        class="btn me-2 account-buttons text-warning"
         routerLink="/account/login"
       >
         Login
       </button>
-      <button type="button" class="btn account-buttons" routerLink="/account/register">
+      <button
+        type="button"
+        class="text-warning btn account-buttons"
+        routerLink="/account/register"
+      >
         Sign-up
       </button>
-      <button type="button" class="btn mx-2 account-buttons" (click)="logout()">
+      <button
+        type="button"
+        class="text-warning btn mx-2 account-buttons"
+        (click)="logout()"
+      >
         Logout
       </button>
     </div>
@@ -49,6 +59,7 @@
 </div>
 
 <!-- main app container -->
-<div class="container">
+<div class="container" >
   <router-outlet></router-outlet>
 </div>
+
