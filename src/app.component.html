@@ -26,13 +26,13 @@
     <ng-container *ngIf="user">
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li>
-          <a class="text-warning nav-item nav-link nav-links" routerLink="/"
+          <a class="nav-item nav-link custom-color" routerLink="/"
             >Home</a
           >
         </li>
         <li>
           <a
-            class="text-warning nav-item nav-link nav-links"
+            class="nav-item nav-link custom-color"
             routerLink="/starships"
             >Starships</a
           >
@@ -42,7 +42,7 @@
       <div class="col-md-3 text-end">
         <button
           type="button"
-          class="text-warning btn mx-2 account-buttons"
+          class="btn mx-2 account-buttons custom-color"
           (click)="logout()"
         >
           <i class="fa-solid fa-right-from-bracket"></i>
@@ -59,7 +59,7 @@
 </div>
 <!--  <button
         type="button"
-        class="btn me-2 account-buttons text-warning"
+        class="btn me-2 account-buttons "
         routerLink="/account/login"
       >
         <i class="fa-solid fa-right-to-bracket"></i>
@@ -67,7 +67,7 @@
       </button> -->
 <!--  <button
         type="button"
-        class="text-warning btn account-buttons"
+        class=" btn account-buttons"
         routerLink="/account/register"
       >
         <i class="fa-solid fa-user-plus"></i>

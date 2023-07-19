@@ -3,10 +3,17 @@ body {
   background-color: #0a0b0b;
 }
 
-.account-buttons {color: #aaaaaa;}
-.account-buttons:hover {color: #aaaaaa;}
+.account-buttons {
+  color: #aaaaaa;
+}
+.account-buttons:hover {
+  color: #aaaaaa;
+}
 
-.navbar-links:hover  {color: #aaaaaa;}
+.custom-color {
+  color: #ffc107
+}
+.custom-color:hover {
+  color: #fff;
 
-
-
+}
