@@ -1,0 +1,33 @@
+/* CSS para el body */
+
+
+.container-fluid {
+  font-family: "Nanum Gothic", sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-family: "Tektur", cursive;
+
+}
+
+
+
+
+
+
+
+
+
+.slide-up-effect {
+  animation: slide-up 1s ease-out; /* Duración de 1 segundo con función de aceleración ease-out */
+}
+
+/* Animación para el efecto de desplazamiento hacia arriba */
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100%); /* Desplazamiento hacia abajo */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Desplazamiento hacia arriba */
+  }
+}
