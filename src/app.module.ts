@@ -18,6 +18,7 @@ import { FichaComponent } from './app/ficha/ficha.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PilotsComponent } from './app/ficha/pilots/pilots.component';
 import { HeaderComponent } from './app/header/header.component';
+import { FilmsComponent } from './app/ficha/films/films.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -36,6 +37,7 @@ import { HeaderComponent } from './app/header/header.component';
     FichaComponent,
     PilotsComponent,
     HeaderComponent,
+    FilmsComponent,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

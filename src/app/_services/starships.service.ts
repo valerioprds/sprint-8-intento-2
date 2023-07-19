@@ -3,19 +3,18 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map, filter } from 'rxjs/operators';
 
-
 @Injectable({
   providedIn: 'root',
 })
 export class StarshipService {
-  private nextPage = 2
+  private nextPage = 2;
   private imageURL = ' https://starwars-visualguide.com/assets/img/starships/';
-  private imagesPilots = 'https://starwars-visualguide.com/assets/img/characters/'
-
+  private imagesPilots =
+    'https://starwars-visualguide.com/assets/img/characters/';
+  private filmsAPI = 'https://starwars-visualguide.com/assets/img/films/';
 
   private apiUrl = 'https://swapi.dev/api/starships';
   constructor(private http: HttpClient) {}
-
 
   getStarshipsDetails(id: string): Observable<any> {
     const path = `https://swapi.dev/api/starships/${id}/`;
@@ -35,14 +34,17 @@ export class StarshipService {
 
   getMoreStarships(): Observable<any> {
     const url = `${this.apiUrl}/?page=${this.nextPage}`;
-    console.log(url)
+    console.log(url);
     this.nextPage++;
     return this.http.get<any>(url);
   }
 
-
   getImagesPilots(pilotsId: string): any {
-    console.log(this.imagesPilots)
+    console.log(this.imagesPilots);
     return `${this.imagesPilots}${pilotsId}.jpg`;
+  }
+
+  getImagesFilms(filmId: string): any {
+    return `${this.filmsAPI}${filmId}.jpg`;
   }
 }
