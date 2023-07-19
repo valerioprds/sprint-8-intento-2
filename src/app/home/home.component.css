@@ -1,20 +1,10 @@
 /* CSS para el body */
 
-
 .container-fluid {
   font-family: "Nanum Gothic", sans-serif;
   font-family: "Rubik", sans-serif;
   font-family: "Tektur", cursive;
-
 }
-
-
-
-
-
-
-
-
 
 .slide-up-effect {
   animation: slide-up 1s ease-out; /* Duración de 1 segundo con función de aceleración ease-out */

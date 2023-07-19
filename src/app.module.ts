@@ -17,23 +17,25 @@ import { StarshipComponent } from './app/starship/starships/starships.component'
 import { FichaComponent } from './app/ficha/ficha.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PilotsComponent } from './app/ficha/pilots/pilots.component';
+import { HeaderComponent } from './app/header/header.component';
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
   ],
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-
+    HeaderComponent,
     StarshipComponent,
-      FichaComponent,
-      PilotsComponent,
+    FichaComponent,
+    PilotsComponent,
+    HeaderComponent,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
