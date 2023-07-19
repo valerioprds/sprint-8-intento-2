@@ -1,8 +1,8 @@
 <div class="container col-md-6 offset-md-3 mt-5">
   <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
   <div class="card">
-    <h4 class="card-header">Register</h4>
-    <div class="card-body">
+    <h4 class="card-header bg-dark text-warning">Register</h4>
+    <div class="card-body bg-dark text-warning">
       <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <div class="mb-3">
           <label class="form-label">First Name</label>
@@ -58,14 +58,14 @@
           </div>
         </div>
         <div>
-          <button [disabled]="loading" class="btn btn-primary">
+          <button [disabled]="loading" class="btn btn-warning">
             <span
               *ngIf="loading"
               class="spinner-border spinner-border-sm me-1"
             ></span>
             Register
           </button>
-          <a routerLink="../login" class="btn btn-link">Cancel</a>
+          <a routerLink="../login" class="btn btn-link text-warning">Cancel</a>
         </div>
       </form>
     </div>
