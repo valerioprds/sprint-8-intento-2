@@ -16,6 +16,7 @@ import { fakeBackendProvider } from './app/_helpers';
 import { StarshipComponent } from './app/starship/starships/starships.component';
 import { FichaComponent } from './app/ficha/ficha.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { PilotsComponent } from './app/ficha/pilots/pilots.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -32,6 +33,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 
     StarshipComponent,
       FichaComponent,
+      PilotsComponent,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

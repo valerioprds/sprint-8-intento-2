@@ -10,6 +10,8 @@ import { map, filter } from 'rxjs/operators';
 export class StarshipService {
   private nextPage = 2
   private imageURL = ' https://starwars-visualguide.com/assets/img/starships/';
+  private imagesPilots = 'https://starwars-visualguide.com/assets/img/characters/'
+
 
   private apiUrl = 'https://swapi.dev/api/starships';
   constructor(private http: HttpClient) {}
@@ -36,5 +38,11 @@ export class StarshipService {
     console.log(url)
     this.nextPage++;
     return this.http.get<any>(url);
+  }
+
+
+  getImagesPilots(pilotsId: string): any {
+    console.log(this.imagesPilots)
+    return `${this.imagesPilots}${pilotsId}.jpg`;
   }
 }

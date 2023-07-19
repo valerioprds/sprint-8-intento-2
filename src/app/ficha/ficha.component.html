@@ -1,84 +1,94 @@
-
 <div class="backgound-color">
-<div class="row ficha-container">
-  <div class="col-12 d-flex justify-content-center py-3">
-    <div class="card back-image text-white backgound-color">
-      <div class="card-body py-0 ">
-        <div class="row">
-          <div class="col-12 d-flex justify-content-center">
-            <div class="card border-0 card-child">
-              <div class="card-body card-body backgound-color text-center py-0">
-                <img
-                  [src]="sanitizaImage(imagesURL)"
-                  alt="Starship Image"
-                  [alt]="starship.name"
-                  (error)="getErrorImage()"
-                />
-                <h3 class="py-0">{{ starship.name }}</h3>
+  <div class="row ficha-container" >
+    <div class="col-12 d-flex justify-content-center py-3" >
+      <div class="card back-image text-white backgound-color">
+        <div class="card-body py-0" style="border: 2px solid green;">
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+              <div class="card border-0 card-child">
+                <div
+                  class="card-body card-body backgound-color text-center py-0"
+                >
+                  <h3 class="py-0">{{ starship.name }}</h3>
+                  <img
+                    [src]="sanitizaImage(imagesURL)"
+                    alt="Starship Image"
+                    [alt]="starship.name"
+                    (error)="getErrorImage()"
+                  />
 
-                <p class="p-0 m-0 card-text ">
-                  <strong>MODEL:</strong> {{ starship.model }}
-                </p>
-                <p class="p-0 m-0 card-text ">
-                  <strong>STARSHIP CLASS:</strong>
-                  {{ starship.starship_class }}
-                </p>
-                <p class="p-0 m-0 card-text ">
-                  <strong>MANUFACTURER:</strong> {{ starship.manufacturer }}
-                </p>
-                <p class="p-0 m-0 card-text ">
-                  <strong>COST:</strong>
-                  {{ starship.cost_in_credits }} credits
-                </p>
+                  <p class="p-0 m-0 card-text">
+                    <strong>MODEL:</strong> {{ starship.model }}
+                  </p>
+                  <p class="p-0 m-0 card-text">
+                    <strong>STARSHIP CLASS:</strong>
+                    {{ starship.starship_class }}
+                  </p>
+                  <p class="p-0 m-0 card-text">
+                    <strong>MANUFACTURER:</strong> {{ starship.manufacturer }}
+                  </p>
+                  <p class="p-0 m-0 card-text">
+                    <strong>COST:</strong>
+                    {{ starship.cost_in_credits }} credits
+                  </p>
+                </div>
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-12 col-md-6 px-0">
+              <div class="card border-0 card-child" card-child>
+                <div class="card-body backgound-color">
+                  <p class="p-0 m-0 card-text">
+                    <strong>CREW:</strong> {{ starship.crew }}
+                  </p>
+                  <p class="p-0 m-0 card-text">
+                    <strong>PASSENGER CAPACITY:</strong>
+                    {{ starship.passengers }}
+                  </p>
+                  <p class="p-0 m-0 card-text">
+                    <strong>CARGO CAPACITY:</strong>
+                    {{ starship.cargo_capacity }} tons
+                  </p>
+                  <p class="p-0 m-0 card-text">
+                    <strong>CONSUMABLES:</strong> {{ starship.consumables }}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 px-0">
+              <div class="card border-0 card-child">
+                <div class="card-body backgound-color">
+                  <p class="p-0 m-0 card-text">
+                    <strong>LENGTH:</strong> {{ starship.length }}
+                  </p>
+                  <p class="p-0 m-0 card-text">
+                    <strong>MAXIMUM ATMOSPHERING SPEED:</strong>
+                    {{ starship.max_atmosphering_speed }} KM/H
+                  </p>
+                  <p class="p-0 m-0 card-text">
+                    <strong>HIPERDRIVE RATING:</strong>
+                    {{ starship.hyperdrive_rating }}
+                  </p>
+                  <p class="p-0 m-0 card-text">
+                    <strong>MAXIMUN SPEED IN REALSPACE:</strong>
+                    {{ starship.MGLT }} MGLT
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <app-pilots></app-pilots> -->
         </div>
-        <div class="row">
-          <div class="col-12 col-md-6 px-0">
-            <div class="card border-0 card-child" card-child>
-              <div class="card-body backgound-color">
-                <p class="p-0 m-0 card-text ">
-                  <strong>CREW:</strong> {{ starship.crew }}
-                </p>
-                <p class="p-0 m-0 card-text">
-                  <strong>PASSENGER CAPACITY:</strong>
-                  {{ starship.passengers }}
-                </p>
-                <p class="p-0 m-0 card-text">
-                  <strong>CARGO CAPACITY:</strong>
-                  {{ starship.cargo_capacity }} tons
-                </p>
-                <p class="p-0 m-0 card-text">
-                  <strong>CONSUMABLES:</strong> {{ starship.consumables }}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 px-0">
-            <div class="card border-0 card-child">
-              <div class="card-body backgound-color">
-                <p class="p-0 m-0 card-text">
-                  <strong>LENGTH:</strong> {{ starship.length }}
-                </p>
-                <p class="p-0 m-0 card-text">
-                  <strong>MAXIMUM ATMOSPHERING SPEED:</strong>
-                  {{ starship.max_atmosphering_speed }} KM/H
-                </p>
-                <p class="p-0 m-0 card-text">
-                  <strong>HIPERDRIVE RATING:</strong>
-                  {{ starship.hyperdrive_rating }}
-                </p>
-                <p class="p-0 m-0 card-text">
-                  <strong>MAXIMUN SPEED IN REALSPACE:</strong>
-                  {{ starship.MGLT }} MGLT
-                </p>
-              </div>
-            </div>
-          </div>
+        <app-pilots
+          *ngIf="imagesPilots.length > 0"
+          [imagesPilots]="imagesPilots"
+        ></app-pilots>
+        <div style="border: 2px solid red;" *ngIf="imagesPilots.length === 0" class="white-text">
+          <strong>Pilots: </strong> No pilots available right now
         </div>
+        <br />
       </div>
     </div>
   </div>
-</div>
 </div>

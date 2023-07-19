@@ -17,6 +17,7 @@ import {
 export class FichaComponent implements OnInit {
   starship: any;
   imagesURL: string = '';
+  public imagesPilots: any[] = [];
 
   errorImage: string = 'assets/error-icon-28.png';
 
@@ -49,5 +50,13 @@ export class FichaComponent implements OnInit {
 
   getErrorImage() {
     this.imagesURL = this.errorImage;
+  }
+
+  getPilotsDetails() {
+    this.imagesPilots = this.starship.pilots.map((pilotUrl: string) => {
+      console.log(pilotUrl);
+      const pilotId = pilotUrl.split('/').filter(Boolean).pop();
+      return this.starshipService.getImagesPilots(pilotId!);
+    });
   }
 }
