@@ -14,7 +14,7 @@ const routes: Routes = [
     { path: 'account/register', component: RegisterComponent ,  },
     { path: 'starships', component: StarshipComponent, canActivate: [AuthGuard] },
 
-    { path: 'starships/:id', component: FichaComponent },
+    { path: 'starships/:id', component: FichaComponent, canActivate: [AuthGuard]  },
 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
