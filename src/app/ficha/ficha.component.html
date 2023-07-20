@@ -1,22 +1,21 @@
 <div class="backgound-color">
-  <div class="row ficha-container" >
-    <div class="col-12 d-flex justify-content-center py-3" >
+  <div class="row ficha-container">
+    <div class="col-12 d-flex justify-content-center py-3">
       <div class="card back-image text-white backgound-color">
-        <div class="card-body py-0" >
+        <div class="card-body py-0">
           <div class="row">
             <div class="col-12 d-flex justify-content-center">
               <div class="card border-0 card-child">
                 <div
                   class="card-body card-body backgound-color text-center py-0"
                 >
-                  <h3 class="py-0">{{ starship.name }}</h3>
                   <img
                     [src]="sanitizaImage(imagesURL)"
                     alt="Starship Image"
                     [alt]="starship.name"
                     (error)="getErrorImage()"
                   />
-
+                  <h3 class="py-0">{{ starship.name }}</h3>
                   <p class="p-0 m-0 card-text">
                     <strong>MODEL:</strong> {{ starship.model }}
                   </p>
@@ -79,16 +78,16 @@
             </div>
           </div>
           <!-- <app-pilots></app-pilots> -->
+          <app-pilots
+            *ngIf="imagesPilots.length > 0"
+            [imagesPilots]="imagesPilots"
+          ></app-pilots>
+          <div *ngIf="imagesPilots.length === 0" class="text-warning">
+            <strong>Pilots: </strong> No pilots available right now
+          </div>
         </div>
-        <app-pilots
-          *ngIf="imagesPilots.length > 0"
-          [imagesPilots]="imagesPilots"
-        ></app-pilots>
-        <div  *ngIf="imagesPilots.length === 0" class="white-text">
-          <strong>Pilots: </strong> No pilots available right now
-        </div>
+
         <br />
-        <app-films [filmsAPI]="films"></app-films>
       </div>
     </div>
   </div>

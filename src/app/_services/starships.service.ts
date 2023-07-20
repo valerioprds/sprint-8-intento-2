@@ -11,7 +11,7 @@ export class StarshipService {
   private imageURL = ' https://starwars-visualguide.com/assets/img/starships/';
   private imagesPilots =
     'https://starwars-visualguide.com/assets/img/characters/';
-  private filmsAPI = 'https://starwars-visualguide.com/assets/img/films/';
+    private filmsUrl = 'https://starwars-visualguide.com/assets/img/films/'
 
   private apiUrl = 'https://swapi.dev/api/starships';
   constructor(private http: HttpClient) {}
@@ -45,6 +45,7 @@ export class StarshipService {
   }
 
   getImagesFilms(filmId: string): any {
-    return `${this.filmsAPI}${filmId}.jpg`;
+    console.log(filmId)
+    return `${this.filmsUrl}${filmId}.jpg`;
   }
 }

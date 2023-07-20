@@ -6,9 +6,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./films.component.css']
 })
 export class FilmsComponent implements OnInit {
-  @Input() filmsAPI: any[] = [];
+  @Input() films: any[] = [];
 
-  ngOnInit(): void {
-    this.filmsAPI;
+  ngOnInit() {
+    this.films
   }
 }
