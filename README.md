@@ -1,27 +1,29 @@
-# Sprint8Intento2
+🚀 Starship Explorer - Angular Application
+Welcome to Starship Explorer! Dive deep into the universe and explore the magnificent starships from various realms. Not only can you visualize the starships, but also get a detailed glance at the pilots and films associated with each starship.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
+🌌 Overview
+Starship Explorer is an intuitive application that provides detailed information on various starships. The information ranges from starship specifications to their associated pilots and films. The application emphasizes a rich visual experience by displaying relevant images for starships, pilots, and films.
 
-## Development server
+🎯 Features
+Detailed Starship View: Access comprehensive details of each starship.
+Dynamic Image Display: Visually rich representation with images of starships, pilots, and films.
+Safe Image Handling: Incorporated safety protocols to handle unsafe or missing image URLs.
+Interactive Exploration: Click through related pilots and films to explore deeper.
+Responsive Design: Optimized for various device screens.
+📚 Index
+Home Page: Display a list of all starships.
+Starship Details: View detailed specifications, pilot images, and associated films.
+Pilots Page: Access a list of all pilots.
+Film Details: Dive into the universe of each film and its associated characters.
+🛠 Technologies
+Built with love and the following technologies:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Frontend Framework: Angular
+Routing: Angular's ActivatedRoute
+API Calls: Angular's HttpClient
+Security: Angular's DomSanitizer for safely binding URLs.
+Styling: CSS
+📝 Conclusion
+Starship Explorer offers an engaging platform for enthusiasts to learn and explore the intriguing world of starships, their pilots, and their cinematic journeys. By seamlessly integrating technology, design, and data, we strive to provide an experience that’s both informative and visually appealing.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+If you're a recruiter looking for a passionate developer with an eye for details and a knack for integrating multiple services, I'm your candidate. I believe in building applications that resonate with users and offer genuine value. Let's connect and explore opportunities to collaborate!
