@@ -41,4 +41,4 @@ If you're a recruiter looking for a passionate developer with an eye for details
 
 ⭐️ Remember to star this repository if you like it!
 
-🔗 [LinkedIn]([www.linkedin.com/in/valerioparadiso](https://www.linkedin.com/in/valerioparadiso/)https://www.linkedin.com/in/valerioparadiso/) | 🔗 [Portfolio](YOUR_PORTFOLIO_LINK)
+🔗 [LinkedIn](https://www.linkedin.com/in/valerioparadiso/) | 🔗 [Portfolio](YOUR_PORTFOLIO_LINK)
