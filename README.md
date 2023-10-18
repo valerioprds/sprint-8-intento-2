@@ -1,5 +1,4 @@
-#🚀 Starship Explorer - Angular Application
-
+🚀 Starship Explorer - Angular Application
 Welcome to Starship Explorer! Dive deep into the universe and explore the magnificent starships from various realms. Not only can you visualize the starships, but also get a detailed glance at the pilots and films associated with each starship.
 
 🌌 Overview
